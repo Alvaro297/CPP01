@@ -1,6 +1,6 @@
 #include "Zombie.hpp"
 
-int main(int argc, char const *argv[])
+int main()
 {
 	Zombie *Zombie;
 

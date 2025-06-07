@@ -27,10 +27,13 @@ int main(int argc, char **argv)
 	switch (compare) {
 		case 1:
 			harl.debug();
+			// fall through
 		case 2:
 			harl.info();
+			// fall through
 		case 3:
 			harl.warning();
+			// fall through
 		case 4:
 			harl.error();
 			break;

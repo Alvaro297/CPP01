@@ -1,5 +1,5 @@
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef HARL_HPP
+# define HARL_HPP
 
 # include <iostream>
 # include <string>
@@ -12,14 +12,10 @@ private:
 	void warning(void);
 	void error(void);
 public:
+	Harl();
+	~Harl();
 	void complain(std::string level);
 };
 
-Harl::Harl(/* args */)
-{
-}
 
-Harl::~Harl()
-{
-}
 #endif

@@ -10,7 +10,7 @@ void Zombie::announce()
 Zombie::Zombie(std::string name)
 {
 	this->name = name;
-	cout << "Zombie " << name << "was created" << endl;
+	cout << "Zombie " << name << " was created" << endl;
 }
 
 Zombie::~Zombie()

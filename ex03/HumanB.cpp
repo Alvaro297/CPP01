@@ -1,5 +1,13 @@
 #include "HumanB.hpp"
 
+HumanB::HumanB(const std::string& name)
+{
+	this->name = name;
+	this->weapon = NULL;
+}
+
+HumanB::~HumanB() {}
+
 void HumanB::setWeapon(Weapon &weapon)
 {
 	this->weapon = &weapon;

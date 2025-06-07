@@ -9,7 +9,7 @@ CFLAGS	= -Werror -Wextra -Wall -std=c++98
 INC_PATH	= ./includes/
 INC			= -I $(INC_PATH)
 
-SRC_PATH	= ./sources/
+SRC_PATH	= ./
 SRC			=	Zombie.cpp \
 				newZombie.cpp \
 				randomChump.cpp	\

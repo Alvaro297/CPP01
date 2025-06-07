@@ -9,9 +9,8 @@ CFLAGS	= -Werror -Wextra -Wall -std=c++98
 INC_PATH	= ./includes/
 INC			= -I $(INC_PATH)
 
-SRC_PATH	= ./sources/
 SRC			= main.cpp Harl.cpp
-SRCS		= $(addprefix $(SRC_PATH), $(SRC))
+SRCS		= $(SRC)
 
 OBJ_PATH	= ./objects/
 OBJ			= $(SRC:.cpp=.o)
@@ -24,7 +23,7 @@ all: $(OBJ_PATH) $(NAME)
 $(OBJ_PATH):
 	mkdir -p $(OBJ_PATH)
 
-$(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
+$(OBJ_PATH)%.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@ $(INC)
 
 # Program-building rule

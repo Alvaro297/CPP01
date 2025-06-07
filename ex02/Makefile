@@ -1,44 +1,23 @@
-# Program name
-NAME	= main
+NAME = main
+CC = g++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
+SRCS = main.cpp
+OBJS = $(SRCS:.cpp=.o)
 
-# Compiler
-CC		= c++
-CFLAGS	= -Werror -Wextra -Wall -std=c++98
+all: $(NAME)
 
-# Build files
-INC_PATH	= ./includes/
-INC			= -I $(INC_PATH)
-
-SRC_PATH	= ./sources/
-SRC			= main.cpp
-SRCS		= $(addprefix $(SRC_PATH), $(SRC))
-
-OBJ_PATH	= ./objects/
-OBJ			= $(SRC:.cpp=.o)
-OBJS		= $(addprefix $(OBJ_PATH), $(OBJ))
-
-# Build rule
-all: $(OBJ_PATH) $(NAME)
-
-# Object-building rules
-$(OBJ_PATH):
-	mkdir -p $(OBJ_PATH)
-
-$(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
-	$(CC) $(CFLAGS) -c $< -o $@ $(INC)
-
-# Program-building rule
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $@ $(INC)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
-# Cleaning rules
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
-	rm -rf $(OBJ_PATH)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
-# Remake
 re: fclean all
 
-.PHONY: all re clean fclean
+.PHONY: all clean fclean re

@@ -27,3 +27,6 @@ void Harl::complain(std::string level)
 		std::cout << "Invalid complaint level." << std::endl;
 	}
 }
+
+Harl::Harl() {}
+Harl::~Harl() {}
