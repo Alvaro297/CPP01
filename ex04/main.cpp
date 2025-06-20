@@ -29,13 +29,12 @@ void	readFile(char const **argv)
 	std::string s2 = argv[3];
 
 	filenameout = std::string(argv[1]) + ".replace";
-	file.open(argv[1], std::ios::in);
 	if (!file)
 	{
 		std::cerr << "Failed to open the file." << std::endl;
 		return ;
 	}
-	fileout.open(filenameout, std::ios::out);
+	fileout.open(filenameout.c_str(), std::ios::out);
 	if (!fileout)
 	{
 		std::cerr << "Failed to create the output file." << std::endl;

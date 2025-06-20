@@ -1,19 +1,17 @@
 # include "Zombie.hpp"
 
-using namespace std;
-
 void Zombie::announce()
 {
-	cout << name << ": BraiiiiiiinnnzzzZ..." << endl;
+	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 Zombie::Zombie(std::string name)
 {
 	this->name = name;
-	cout << "Zombie " << name << "was created" << endl;
+	std::cout << "Zombie " << name << " was created" << std::endl;
 }
 
 Zombie::~Zombie()
 {
-	std::cout << "Zombie " << name << " destroyed.";
+	std::cout << "Zombie " << name << " destroyed." << std::endl;
 }

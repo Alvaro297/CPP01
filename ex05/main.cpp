@@ -6,6 +6,6 @@ int main() {
 	harl.complain("INFO");
 	harl.complain("WARNING");
 	harl.complain("ERROR");
-	harl.complain("UNKNOWN");  // Caso no válido
+	harl.complain("UNKNOWN");
 	return 0;
 }

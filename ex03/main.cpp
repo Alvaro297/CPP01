@@ -12,8 +12,9 @@ int main()
 		bob.attack();
 	}
 	{
-		Weapon club = Weapon("crude spiked club");
 		HumanB jim = HumanB("Jim");
+		jim.attack(); // Jim ataca sin arma
+		Weapon club = Weapon("crude spiked club");
 		jim.setWeapon(club);
 		jim.attack();
 		club.setType("some other type of club");
